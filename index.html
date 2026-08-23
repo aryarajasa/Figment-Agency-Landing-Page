@@ -43,7 +43,39 @@
   <!-- Custom Favicon -->
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
-<body class="bg-[#fbfcfd] text-slate-700 antialiased font-sans">
+<body class="bg-[#fbfcfd] text-slate-700 antialiased font-sans"> 
+  <!-- =========================================================================
+       0. PREMIUM MINIMALIST PRELOADER / LOADING SCREEN ANIMATION
+       ========================================================================= -->
+  <div id="preloader" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#fbfcfd] bg-dotted-pattern transition-all duration-700 ease-out">
+    <div class="relative flex flex-col items-center max-w-xs text-center px-4">
+      
+      <!-- Brand Squircle Icon with Ambient Glowing Halo -->
+      <div class="relative mb-6">
+        <div class="absolute -inset-4 bg-gradient-to-tr from-[#004dd9]/30 via-[#49c8ff]/40 to-transparent rounded-3xl blur-xl animate-pulse"></div>
+        <img src="logo.png" alt="Figment" class="relative w-16 h-16 rounded-2xl shadow-xl border border-white/80 transform transition-transform duration-500 scale-100 preloader-logo-spin">
+      </div>
+
+      <!-- Live Step Status Indicator -->
+      <div class="text-xs font-semibold text-slate-800 tracking-tight mb-2.5 flex items-center justify-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-brand-blue animate-ping"></span>
+        <span id="preloaderStatusText">Initializing AI Knowledge Graphs...</span>
+      </div>
+
+      <!-- Precision Progress Bar -->
+      <div class="w-48 h-1 bg-slate-200/80 rounded-full overflow-hidden mb-2.5 relative shadow-inner">
+        <div id="preloaderProgressBar" class="h-full bg-gradient-to-r from-brand-blue via-sky-400 to-brand-blue rounded-full transition-all duration-150 w-0"></div>
+      </div>
+
+      <!-- Percentage Counter -->
+      <div class="flex items-center justify-between w-48 text-[11px] text-slate-400 font-medium">
+        <span>FIGMENT.AI</span>
+        <span id="preloaderCounter" class="text-slate-600 font-semibold">0%</span>
+      </div>
+
+    </div>
+  </div>
+
 
   <!-- =========================================================================
        1. TOP ANNOUNCEMENT BANNER

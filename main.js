@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
   initNavbar();
   initDnaWaveCanvas();
   initHeroTabs();
@@ -671,4 +672,47 @@ function initModals() {
       }, 500);
     });
   }
+}
+
+/* ==========================================================================
+   0. PREMIUM MINIMALIST PRELOADER CONTROLLER
+   ========================================================================== */
+function initPreloader() {
+  const preloader = document.getElementById('preloader');
+  const progressBar = document.getElementById('preloaderProgressBar');
+  const counter = document.getElementById('preloaderCounter');
+  const statusText = document.getElementById('preloaderStatusText');
+
+  if (!preloader) return;
+
+  const statuses = [
+    { progress: 25, text: "Scanning AI Knowledge Graphs..." },
+    { progress: 60, text: "Calibrating Search Consensus..." },
+    { progress: 90, text: "Structuring Entity Matrices..." },
+    { progress: 100, text: "Welcome to Figment" }
+  ];
+
+  let currentProgress = 0;
+  let statusIndex = 0;
+
+  const interval = setInterval(() => {
+    currentProgress += Math.floor(Math.random() * 8) + 4;
+    
+    if (currentProgress > 100) currentProgress = 100;
+
+    if (progressBar) progressBar.style.width = currentProgress + '%';
+    if (counter) counter.textContent = currentProgress + '%';
+
+    if (statusIndex < statuses.length && currentProgress >= statuses[statusIndex].progress) {
+      if (statusText) statusText.textContent = statuses[statusIndex].text;
+      statusIndex++;
+    }
+
+    if (currentProgress >= 100) {
+      clearInterval(interval);
+      setTimeout(() => {
+        preloader.classList.add('preloader-hidden');
+      }, 250);
+    }
+  }, 35);
 }

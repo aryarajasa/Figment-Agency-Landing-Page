@@ -442,3 +442,26 @@ a.bg-brand-blue:active,
 ::-webkit-scrollbar-thumb:hover {
   background: #cbd5e1;
 }
+
+/* ==========================================================================
+   PRELOADER / LOADING SCREEN ANIMATIONS
+   ========================================================================== */
+#preloader.preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.03);
+  pointer-events: none;
+}
+
+.preloader-logo-spin {
+  animation: preloader-float 2.4s ease-in-out infinite;
+}
+
+@keyframes preloader-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-4px) scale(1.02);
+  }
+}
