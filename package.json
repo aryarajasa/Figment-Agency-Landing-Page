@@ -4,9 +4,8 @@
   "private": true,
   "description": "Figment Agency Landing Page",
   "scripts": {
-    "build": "echo 'Static build ready'",
-    "start": "node server.js",
-    "deploy": "wrangler deploy"
+    "build": "node build.js",
+    "start": "node server.js"
   },
   "devDependencies": {
     "wrangler": "^3.109.0"
