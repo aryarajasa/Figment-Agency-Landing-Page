@@ -292,11 +292,12 @@ a.bg-brand-blue:active,
 }
 
 /* Universal hover border-color darkening for all interactive boxes */
-.wall-masonry-item > div {
+.wall-masonry-item {
   border: 1px solid #e5e7eb;
+  border-radius: 1rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.wall-masonry-item > div:hover {
+.wall-masonry-item:hover {
   border-color: #cbd5e1 !important;
   box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.03);
 }
