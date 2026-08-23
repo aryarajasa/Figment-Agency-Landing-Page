@@ -1,4 +1,5 @@
 name = "figment-agency-landing-page"
+main = "worker.js"
 compatibility_date = "2026-08-23"
 
 [assets]
