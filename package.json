@@ -1,0 +1,19 @@
+{
+  "name": "figment-agency-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Figment Agency Landing Page",
+  "scripts": {
+    "build": "echo 'Static build ready'",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "figment",
+    "agency",
+    "landing-page",
+    "geo",
+    "seo"
+  ],
+  "author": "Arya Rajasa",
+  "license": "MIT"
+}
