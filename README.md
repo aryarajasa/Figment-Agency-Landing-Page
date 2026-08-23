@@ -8,7 +8,7 @@ Interactive landing page for Figment Agency, an organic search and Generative En
 - **Tailwind CSS (CDN)**
 - **Vanilla JavaScript (ES6+)**
 - **HTML5 Canvas 2D** — Custom 3D particle DNA helix wave with interactive cursor scattering and delayed spring regeneration
-- **Inter Font Family** (Google Fonts)
+- **Instrument Sans** (Google Fonts)
 
 ## Features
 
