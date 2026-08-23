@@ -1,4 +1,4 @@
-# Figment Agency — Landing Page
+# Figment Agency Landing Page
 
 Interactive landing page for Figment Agency, an organic search and Generative Engine Optimisation (GEO) agency based in London. Built with a clean, minimalist design inspired by ToDesktop.
 
