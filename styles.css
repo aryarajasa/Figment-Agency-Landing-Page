@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Headline:wght@400;500;600;700&family=Stack+Sans+Text:wght@300;400;500;600;700&display=swap');
 
 /* ==========================================================================
    FIGMENT AGENCY — TODESKTOP LIGHT MINIMALIST DESIGN SYSTEM
@@ -21,7 +21,8 @@
   --color-border: #e5e7eb;
   --color-border-hover: #cbd5e1;
   
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-body: 'Stack Sans Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-headline: 'Stack Sans Headline', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 /* Base resets & typography */
@@ -29,12 +30,12 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
 }
 
 html {
   scroll-behavior: smooth;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   background-color: var(--color-bg-page);
   color: #0f172a;
 }
@@ -42,33 +43,36 @@ html {
 body {
   background-color: var(--color-bg-page);
   color: #334155;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Refined Headings (Medium & Semi-Bold) */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-sans);
+/* Headings with Stack Sans Headline */
+h1, h2, h3, h4, h5, h6, .font-headline {
+  font-family: var(--font-headline);
   color: #0f172a;
   letter-spacing: -0.025em;
   font-weight: 600;
 }
 
 h1 {
+  font-family: var(--font-headline);
   letter-spacing: -0.03em;
   font-weight: 600;
   line-height: 1.12;
 }
 
 h2 {
+  font-family: var(--font-headline);
   letter-spacing: -0.025em;
   font-weight: 600;
   line-height: 1.18;
 }
 
 h3 {
+  font-family: var(--font-headline);
   letter-spacing: -0.02em;
   font-weight: 600;
 }
