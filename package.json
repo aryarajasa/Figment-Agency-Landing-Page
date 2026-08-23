@@ -5,15 +5,12 @@
   "description": "Figment Agency Landing Page",
   "scripts": {
     "build": "echo 'Static build ready'",
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "wrangler deploy"
   },
-  "keywords": [
-    "figment",
-    "agency",
-    "landing-page",
-    "geo",
-    "seo"
-  ],
+  "devDependencies": {
+    "wrangler": "^3.109.0"
+  },
   "author": "Arya Rajasa",
   "license": "MIT"
 }
