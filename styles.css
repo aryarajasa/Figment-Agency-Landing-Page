@@ -1,0 +1,438 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================================================
+   FIGMENT AGENCY — TODESKTOP LIGHT MINIMALIST DESIGN SYSTEM
+   - Font: Inter (Medium & Semi-Bold Headings, No Slab/Monospace)
+   - Background: Clean #fbfcfd with Intentional Dotted Matrix Pattern
+   - Brand Blue: #004dd9 | Accent: #49c8ff | Border: #e5e7eb
+   ========================================================================== */
+
+:root {
+  --color-primary: #004dd9;
+  --color-primary-dark: #00379c;
+  --color-primary-light: #266eff;
+  --color-accent: #49c8ff;
+  --color-accent-light: #f0f9ff;
+  
+  --color-bg-page: #fbfcfd;
+  --color-surface-white: #ffffff;
+  --color-surface-gray: #f8fafc;
+  --color-border: #e5e7eb;
+  --color-border-hover: #cbd5e1;
+  
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Base resets & typography */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-page);
+  color: #0f172a;
+}
+
+body {
+  background-color: var(--color-bg-page);
+  color: #334155;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Refined Headings (Medium & Semi-Bold) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: #0f172a;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+
+h1 {
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  line-height: 1.12;
+}
+
+h2 {
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  line-height: 1.18;
+}
+
+h3 {
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   SOFT TACTILE SKEUOMORPHIC BUTTONS (CREAMY, PLUSH, SATISFYING HOVER)
+   ========================================================================= */
+.btn-primary,
+button.bg-brand-blue,
+a.bg-brand-blue,
+.scanner-next-btn,
+#simRunBtn {
+  position: relative;
+  background: linear-gradient(180deg, #0c57eb 0%, #004dd9 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(0, 65, 184, 0.85) !important;
+  border-radius: 0.5rem;
+  box-shadow: 
+    inset 0 1px 0.5px rgba(255, 255, 255, 0.25),
+    0 1px 2px rgba(0, 77, 217, 0.2),
+    0 2px 6px -1px rgba(0, 77, 217, 0.3) !important;
+  text-shadow: none !important;
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Subtle gloss reflection pseudo */
+.btn-primary::before,
+button.bg-brand-blue::before,
+a.bg-brand-blue::before,
+.scanner-next-btn::before,
+#simRunBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Icon Nudge on Hover */
+.btn-primary svg,
+button.bg-brand-blue svg,
+a.bg-brand-blue svg,
+.scanner-next-btn svg,
+#simRunBtn svg {
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Satisfying Hover State: Soft elevation, luminous bloom glow, gentle lift */
+.btn-primary:hover,
+button.bg-brand-blue:hover,
+a.bg-brand-blue:hover,
+.scanner-next-btn:hover,
+#simRunBtn:hover {
+  background: linear-gradient(180deg, #1f6aff 0%, #0654e8 100%) !important;
+  border-color: #0045c4 !important;
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.38),
+    0 6px 18px -2px rgba(0, 77, 217, 0.45),
+    0 2px 6px rgba(0, 77, 217, 0.22) !important;
+  transform: translateY(-1.5px);
+}
+
+.btn-primary:hover svg,
+button.bg-brand-blue:hover svg,
+a.bg-brand-blue:hover svg,
+.scanner-next-btn:hover svg,
+#simRunBtn:hover svg {
+  transform: translateX(2.5px);
+}
+
+/* Micro-spring Active Press */
+.btn-primary:active,
+button.bg-brand-blue:active,
+a.bg-brand-blue:active,
+.scanner-next-btn:active,
+#simRunBtn:active {
+  transform: translateY(0.5px) scale(0.985) !important;
+  background: linear-gradient(180deg, #0046c7 0%, #003fa8 100%) !important;
+  box-shadow: 
+    inset 0 1.5px 3px rgba(0, 0, 0, 0.2),
+    0 1px 2px rgba(0, 77, 217, 0.25) !important;
+}
+
+/* Secondary Tactile White Button */
+.btn-secondary {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+  color: #334155 !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 
+    inset 0 1px 0 #ffffff,
+    0 1px 2px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%) !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 
+    inset 0 1px 0 #ffffff,
+    0 4px 12px -2px rgba(0, 0, 0, 0.06),
+    0 1px 3px rgba(0, 0, 0, 0.04) !important;
+  transform: translateY(-1.5px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0.5px) scale(0.985) !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ==========================================================================
+   NAVBAR LOGO & BRIGHT BLUE HOVER SHADOW
+   ========================================================================= */
+.navbar-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.navbar-logo-link:hover .navbar-logo {
+  transform: scale(1.04);
+  box-shadow: 0 2px 14px rgba(73, 200, 255, 0.35), 0 0 5px rgba(0, 77, 217, 0.15);
+}
+
+/* ==========================================================================
+   HERO VERTICAL GRADIENT SHINE (Top: #2e3953 -> Bottom: #0f172a)
+   ========================================================================= */
+.hero-headline-shine {
+  background: linear-gradient(180deg, #2e3953 0%, #0f172a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #0f172a;
+  display: inline-block;
+}
+
+/* Intentional Dotted Matrix Texture */
+.hero-dotted-section {
+  position: relative;
+  background-color: #fbfcfd;
+  overflow: hidden;
+}
+
+.bg-dotted-pattern {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.12) 1.25px, transparent 1.25px);
+  background-size: 24px 24px;
+}
+
+.hero-ambient-soft-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 500px;
+  background: radial-gradient(circle at 50% 20%, rgba(73, 200, 255, 0.2) 0%, rgba(0, 77, 217, 0.08) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Gradient Text for accents */
+.text-gradient {
+  background: linear-gradient(135deg, #004dd9 0%, #49c8ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   STICKY GLASS NAVBAR
+   ========================================================================= */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ==========================================================================
+   MINIMALIST BENTO CARDS (CRISP 1PX BORDER — DARKER STROKE ON HOVER, NO RING)
+   ========================================================================= */
+.bento-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover: Strictly darken the 1px stroke without increasing thickness or adding rings */
+.bento-card:hover {
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.03);
+}
+
+.bento-card-subtle {
+  position: relative;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bento-card-subtle:hover {
+  border-color: #cbd5e1 !important;
+  background: #ffffff;
+  box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.03);
+}
+
+/* Universal hover border-color darkening for all interactive boxes */
+.wall-masonry-item > div {
+  border: 1px solid #e5e7eb;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.wall-masonry-item > div:hover {
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.03);
+}
+
+.accordion-item {
+  border: 1px solid #e5e7eb;
+  transition: border-color 0.2s ease;
+}
+.accordion-item:hover {
+  border-color: #cbd5e1 !important;
+}
+
+/* Scanner & Simulation interactive option boxes */
+.scanner-option,
+.sim-source-card {
+  border: 1px solid #e5e7eb;
+  transition: border-color 0.2s ease;
+}
+.scanner-option:hover,
+.sim-source-card:hover {
+  border-color: #cbd5e1 !important;
+}
+
+/* Minimalist Tabs */
+.hero-tab-btn {
+  transition: all 0.2s ease;
+  color: #64748b;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+
+.hero-tab-btn.active {
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Minimalist Marquee */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 3rem;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+  min-width: 100%;
+  animation: scroll-left 35s linear infinite;
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - 3rem)); }
+}
+
+/* Accordion */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+  opacity: 0;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 400px;
+  opacity: 1;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+  color: #004dd9;
+}
+
+/* Wall of Love Masonry */
+.wall-masonry {
+  column-count: 1;
+  column-gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .wall-masonry {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wall-masonry {
+    column-count: 3;
+  }
+}
+
+.wall-masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+}
+
+/* Modals */
+.modal-backdrop {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  transform: scale(0.96) translateY(8px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-backdrop.open .modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
