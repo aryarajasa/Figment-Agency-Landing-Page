@@ -19,17 +19,6 @@ Interactive landing page for Figment Agency, an organic search and Generative En
 - **Filterable Wall of Love**: Masonry review grid filtered by industry (Healthcare, Finance, Luxury).
 - **Discovery Call & Guide Modals**: Lightweight lead capture forms with ESC-key and backdrop handling.
 
-## Getting Started
-
-To run the project locally:
-
-```bash
-# Start a local static server
-node server.js
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
 ## File Structure
 
 ```
